@@ -1,38 +1,206 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('./assets/img/background-principal.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 1024px;
+  margin: 0 auto;
+  font-family: 'Poor Story', cursive;
+}
+
+.container {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+/* -------------------------------------- NAVBAR ---------------------------------- */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 8px 16px;
+  color: #fff;
+  fongt-weight: bold;
+  font-family: 'Poor Story', cursive;
+}
+
+nav ul li a:hover {
+  color: #00cdcd;
+}
+
+/* -------------------------------------- MAIN ---------------------------------- */
+
+.principal {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 128px;
+}
+
+.principal p {
+  color: #fff;
+  font-family: 'Poor Story', cursive;
+  text-transform: uppercase;
+  font-size: 56px;
+}
+
+.principal img {
+  width: 516px;
+}
+
+.principal button {
+  font-family: 'Poor Story', cursive;
+  font-size: 18px;
+  padding: 12px 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+
+  border: 2px solid #eedd82;
+  background-color: transparent;
+  color: #00cdcd;
+  transition: 0.5s;
+}
+
+.principal button:hover {
+  background-color: #eedd82;
+  border: 2px solid #eedd82;
+  color: #00cdcd;
+}
+
+.principal button:first-child {
+  margin-right: 32px;
+  background-color: #00cdcd;
+  color: #eedd82;
+  border: none;
+  transition: 0.5s;
+}
+
+.principal button:first-child:hover {
+  background-color: #eedd82;
+  color: #00cdcd;
+}
+
+#personagens {
+  margin-top: 128px;
+}
+
+#personagens h2 {
+  color: #fff;
+  font-family: 'Poor Story', cursive;
+  font-size: 32px;
+  text-transform: uppercase;
+}
+
+#episodios div {
+  display: flex;
+}
+
+.div-personagens {
+  display: flex;
+  justify-content: space-between;
+  alig-itens: flex-start;
+}
+
+.card-peronsagens {
+  width: 324px;
+  height: 324px;
+
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 16px;
+  margin-bottom: 162px;
+
+  background-color: #000;
+  border-radius: 4px;
+}
+
+.card-peronsagens h4 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card-peronsagens span {
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  display: block;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* -------------------------------------- EPISODIOS ---------------------------------- */
+
+#episodios h2 {
+  color: #fff;
+  font-family: 'Poor Story', cursive;
+  font-size: 32px;
+  text-transform: uppercase;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#episodios img {
+  width: 372px;
+
+  margin-right: 12px;
 }
 
-.App-link {
-  color: #61dafb;
+/* -------------------------------------- CONTATO ---------------------------------- */
+#contato {
+  margin-top: 128px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#contato h2 {
+  color: #fff;
+  font-family: 'Poor Story', cursive;
+  font-size: 32px;
+  text-transform: uppercase;
+}
+
+#contato ul {
+  color: #fff;
+  font-family: 'Poor Story', cursive;
+  font-size: 18px;
+}
+
+footer {
+  background-color: #000;
+  padding: 16px 32px;
+}
+
+footer ul {
+  text-align: center;
+  margin: 16px 0;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer ul li a:hover {
+  color: #00cdcd;
+}
+
+footer p {
+  color: #fff;
+  text-align: center;
 }
