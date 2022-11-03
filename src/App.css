@@ -157,10 +157,33 @@ nav ul li a:hover {
   text-transform: uppercase;
 }
 
+#episodios div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#episodios p,
+span {
+  color: #fff;
+}
+
 #episodios img {
   width: 372px;
 
   margin-right: 12px;
+}
+
+#episodios .div-video {
+  display: flex;
+  flex-direction: column;
+
+  border: 2px solid #fff;
+  border-radius: 8px;
+
+  margin: 8px;
+  padding: 8px;
+
+  cursor: pointer;
 }
 
 /* -------------------------------------- CONTATO ---------------------------------- */
@@ -173,12 +196,26 @@ nav ul li a:hover {
   font-family: 'Poor Story', cursive;
   font-size: 32px;
   text-transform: uppercase;
+  margin-bottom: 16px;
 }
 
 #contato ul {
   color: #fff;
   font-family: 'Poor Story', cursive;
   font-size: 18px;
+}
+
+#contato ul li {
+  display: flex;
+}
+
+#contato ul li i {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+#contato ul li i:hover {
+  color: #00cdcd;
 }
 
 footer {
