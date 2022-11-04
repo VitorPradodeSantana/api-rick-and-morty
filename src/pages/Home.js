@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import Button from '../components/Button'
 import EpisodiosHome from '../components/EpisodiosHome'
 import Links from '../components/Links'
@@ -8,6 +8,9 @@ import { FaLinkedin } from 'react-icons/fa'
 import { FaGithubSquare } from 'react-icons/fa'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css'
+import 'swiper/css/free-mode'
+import 'swiper/css/pagination'
 
 import { FreeMode, Pagination } from 'swiper'
 
@@ -15,7 +18,6 @@ import { FreeMode, Pagination } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/free-mode'
 import 'swiper/css/pagination'
-
 
 export default function Home() {
   const [personagens, setPersonagens] = useState([])
@@ -56,48 +58,50 @@ export default function Home() {
         </div>
       </main>
 
-      <Swiper
-        slidesPerView={3}
-        spaceBetween={30}
-        freeMode={true}
-        pagination={{
-          clickable: true
-        }}
-        modules={[FreeMode, Pagination]}
-        className="mySwiper"
-      >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
-      </Swiper>
+      <div></div>
       <section id="personagens" className="container">
         <h2>Personagens</h2>
         <div className="div-personagens">
-          {personagens.map(personagem => (
-            <div className="card-peronsagens">
-              <img src={personagem.image} />
-              <h4>{personagem.name}</h4>
-              <span>{personagem.species}</span>
-            </div>
-          ))}
+          <Swiper
+            slidesPerView={3}
+            spaceBetween={30}
+            freeMode={true}
+            modules={[FreeMode, Pagination]}
+            className="mySwiper"
+            navigation={true}
+          >
+            {personagens.map(personagem => (
+              <SwiperSlide>
+                <div className="card-peronsagens">
+                  <img src={personagem.image} />
+                  <h4>{personagem.name}</h4>
+                  <span>{personagem.species}</span>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </section>
       <section id="episodios" className="container">
         <h2>Episodios</h2>
         <div>
-          {episodios.map(episodio => (
-            <div className="div-video">
-              <h2>{episodio.name}</h2>
-              <span>{episodio.episode}</span>
-              <p>{episodio.air_date}</p>
-            </div>
-          ))}
+          <Swiper
+            spaceBetween={20}
+            slidesPerView={3}
+            onSlideChange={() => console.log('slide change')}
+            onSwiper={swiper => console.log(swiper)}
+          >
+            {episodios.map(episodio => (
+              <SwiperSlide key={episodio.id}>
+                <div className="div-video">
+                  <img src="https://tvcdn.fancaps.net/2637475.jpg" />
+                  <h2>{episodio.name}</h2>
+                  <span>{episodio.episode}</span>
+                  <p>{episodio.air_date}</p>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </section>
       <section id="contato">

@@ -184,6 +184,22 @@ span {
   padding: 8px;
 
   cursor: pointer;
+
+  width: 324px;
+  height: 324px;
+}
+
+#episodios .div-video img {
+  width: 300px;
+  margin: 0 2px;
+}
+
+#episodios .div-video h2 {
+  width: 100%;
+}
+
+#episodios .swiper {
+  height: 350px;
 }
 
 /* -------------------------------------- CONTATO ---------------------------------- */
