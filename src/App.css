@@ -157,11 +157,6 @@ nav ul li a:hover {
   text-transform: uppercase;
 }
 
-#episodios div {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 #episodios p,
 span {
   color: #fff;
@@ -232,6 +227,51 @@ span {
 
 #contato ul li i:hover {
   color: #00cdcd;
+}
+
+/* -------------------------------------- PAGINA PERSONAGENS ---------------------------------- */
+#pagina-personagens .pesquisa {
+  display: flex;
+  width: 420px;
+  margin: 64px auto;
+
+  border: 2px solid #00cdcd;
+  border-radius: 4px;
+}
+
+#pagina-personagens .pesquisa input {
+  width: 100%;
+  padding: 8px 8px;
+
+  color: #fff;
+  background: #000;
+  border: none;
+}
+
+#pagina-personagens .pesquisa input:focus {
+  outline: 0;
+}
+
+#pagina-personagens .pesquisa button {
+  color: #fff;
+  background: #000;
+  padding: 8px 8px;
+  cursor: pointer;
+
+  border: none;
+}
+
+#pagina-personagens .caixa-personagem-page {
+  display: flex;
+  flex-wrap: wrap;
+
+  cursor: pointer;
+}
+
+#pagina-personagens .caixa-personagem-page .card-peronsagens {
+  width: 320px;
+  height: 380px;
+  margin: 16px 4px;
 }
 
 footer {

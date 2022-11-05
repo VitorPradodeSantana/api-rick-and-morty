@@ -86,10 +86,10 @@ export default function Home() {
         <h2>Episodios</h2>
         <div>
           <Swiper
-            spaceBetween={20}
+            spaceBetween={5}
             slidesPerView={3}
-            onSlideChange={() => console.log('slide change')}
-            onSwiper={swiper => console.log(swiper)}
+            modules={[FreeMode, Pagination]}
+            className="mySwiper"
           >
             {episodios.map(episodio => (
               <SwiperSlide key={episodio.id}>
