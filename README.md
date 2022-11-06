@@ -10,4 +10,4 @@ Neste projeto tive como objetivo principal aprender mais sobre o REACT, a como u
 
 Tive a idéia de fazer este projeto apartir de uma pesquisa sobre api's para se consumir que fossem gratuitas e como curto também o desenho decidi fazer este projeto
 
-![Layout do projeto](./src/img/projetoReact.png)
+![Layout do projeto](./src/assets/img/projetoReact.png)
