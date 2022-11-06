@@ -230,7 +230,7 @@ span {
 }
 
 /* -------------------------------------- PAGINA PERSONAGENS ---------------------------------- */
-#pagina-personagens .pesquisa {
+.pesquisa {
   display: flex;
   width: 420px;
   margin: 64px auto;
@@ -239,8 +239,8 @@ span {
   border-radius: 4px;
 }
 
-#pagina-personagens .pesquisa input {
-  width: 100%;
+.pesquisa input {
+  width: 92.5%;
   padding: 8px 8px;
 
   color: #fff;
@@ -248,11 +248,11 @@ span {
   border: none;
 }
 
-#pagina-personagens .pesquisa input:focus {
+.pesquisa input:focus {
   outline: 0;
 }
 
-#pagina-personagens .pesquisa button {
+.pesquisa button {
   color: #fff;
   background: #000;
   padding: 8px 8px;
@@ -338,6 +338,60 @@ span {
 
   color: #eedd82;
   cursor: pointer;
+}
+
+/* -------------------------------------- PAGINA CONTATO ---------------------------------- */
+.page-contato {
+  margin: 50px 0 150px 0;
+}
+
+.page-contato h3 {
+  color: #fff;
+  font-size: 32px;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 50px;
+}
+
+.page-contato p {
+  color: #fff;
+  font-size: 20px;
+}
+
+.page-contato div {
+  margin: 16px 0;
+}
+
+.page-contato h4 {
+  font-size: 22px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.page-contato a {
+  border-radius: 4px;
+  background-color: #000;
+  color: #fff;
+
+  font-size: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 8px 16px;
+  margin-top: 8px;
+
+  transition: 1s;
+  cursor: pointer;
+}
+
+.page-contato a:hover {
+  background-color: #1b1b1b;
+}
+
+.page-contato .linkedin {
+  background-color: #0e76a8;
+}
+
+.page-contato .linkedin:hover {
+  background-color: #255698;
 }
 
 footer {

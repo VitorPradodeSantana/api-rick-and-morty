@@ -68,8 +68,6 @@ export default function Personagens() {
       })
   }, [])
 
-  console.log(searchInput)
-
   return (
     <main id="pagina-personagens" className="container">
       <div className="pesquisa">
@@ -85,36 +83,37 @@ export default function Personagens() {
         </button>
       </div>
       <h2>Personagens</h2>
+
       <div className="caixa-personagem-page">
         {searchInput.length > 1
-          ? (filteredResults.map(personagem => {
-              return (<div
-                className="card-peronsagens"
-                id={personagem.id}
-                key={personagem.id}
-              >
-                <img src={personagem.image} />
-                <h4>{personagem.name}</h4>
-                <span>{personagem.species}</span>
-                <button onClick={openModal}>Abrir modal</button>
-              </div>
-              )
-            }))
-          : (personagens.map(personagem => {
+          ? filteredResults.map(personagem => {
               return (
-              <div
-                className="card-peronsagens"
-                id={personagem.id}
-                key={personagem.id}
-              >
-                <img src={personagem.image} />
-                <h4>{personagem.name}</h4>
-                <span>{personagem.species}</span>
-                <button onClick={openModal}>Abrir modal</button>
-              </div>
+                <div
+                  className="card-peronsagens"
+                  id={personagem.id}
+                  key={personagem.id}
+                >
+                  <img src={personagem.image} />
+                  <h4>{personagem.name}</h4>
+                  <span>{personagem.species}</span>
+                  <button onClick={openModal}>Abrir modal</button>
+                </div>
               )
-            }))
-          }
+            })
+          : personagens.map(personagem => {
+              return (
+                <div
+                  className="card-peronsagens"
+                  id={personagem.id}
+                  key={personagem.id}
+                >
+                  <img src={personagem.image} />
+                  <h4>{personagem.name}</h4>
+                  <span>{personagem.species}</span>
+                  <button onClick={openModal}>Saiba Mais</button>
+                </div>
+              )
+            })}
       </div>
 
       <Modal

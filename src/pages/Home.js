@@ -57,7 +57,6 @@ export default function Home() {
         </div>
       </main>
 
-      <div></div>
       <section id="personagens" className="container">
         <h2>Personagens</h2>
         <div className="div-personagens">
