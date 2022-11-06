@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react'
 import Button from '../components/Button'
-import EpisodiosHome from '../components/EpisodiosHome'
-import Links from '../components/Links'
+
 import imagemRickAndMorty from './../assets/img/imagem-main-rick-and-morty.png'
 import { IoMailOutline } from 'react-icons/io5'
 import { FaLinkedin } from 'react-icons/fa'
